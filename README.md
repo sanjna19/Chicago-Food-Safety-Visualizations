@@ -13,6 +13,10 @@ This data was obtained from the Chicago Department of Public Health's records of
 
 This data was cleaned and preprocessed in a Python (Pandas) environment, including replacing missing values, extracting counts of violations, severity of violations, and mapping results to numerical scores when appropriate. The dataset was well-suited to aspirations for exploratory visual analysis of public health settings for understanding trends, analysis of geographic disparities in inspection outcomes and factors contributing to the frequency of violations.
 
+## Project Dashboard link-
+We've hosted the dashboard on github pages. Please find the link here-
+[Github dashboard link](https://sanjna19.github.io/Chicago-Food-Safety-Visualizations/)
+
 ## Linked View 1: Failure Rate Over Time vs ZIP Code
 
 ![Linked View 1](visualization/L1.gif)
