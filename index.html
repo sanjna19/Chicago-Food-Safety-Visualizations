@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Food Inspections Dashboard</title>
+
+    <!-- Load Vega, Vega-Lite, Vega-Embed -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+
+
+    <!-- Link to your custom JavaScript -->
+    <script src="main.js" defer></script>
+
+    <!-- Link to custom CSS for layout -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Everyday Insight, Citywide Impact</h1>
+
+    <div class="gradient-bar"></div>
+
+    <div class="oswald-heading-container">
+      <div class="skyline-wrapper">
+        <img src="visualization/skyline.jpg" alt="Chicago Skyline" class="skyline-image" />
+        <div class="fade-bottom"></div>
+      </div>
+      <h1 class="oswald-heading">A Student's Guide to Food Safety in Chicago</h1>
+      <h3> Designed through the lens of a Chicago student, this tool helps everyday eaters, business owners, and policy makers 
+        understand where safety gaps exist and how they’ve evolved over time </h3>
+    </div>
+
+    <!-- Grid container for the visualizations -->
+    <div class="grid-container">
+        
+        <div id="linkedview1" class="grid-item"></div> <!-- Time brushing + ZIP failure rates -->
+       <!--  <div id="linkedview2" class="grid-item"></div>  Facility Type click + Monthly Volume -->
+       <!-- <div id="linkedview3" class="grid-item"></div>  Risk Level click + Failure Over Time -->
+        <div id="linkedview4" class="grid-item"></div> <!-- Risk Radio button + Violation Codes -->
+        <div id="linkedview5" class="grid-item"></div> <!-- Year Dropdown + Facility/Failure Views -->
+        <div id="linked_bubble_parallel" class="grid-item"></div>
+        
+        <div id="view" class="grid-item"></div>
+        <div id="view6" class="grid-item"></div> <!-- Linked Spatial visualization -->
+
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+          <span class="modal-close" onclick="closeModal()">×</span>
+          <div id="modal-content-target"></div>
+        </div>
+      </div>
+  
+
+</body>
+</html>
