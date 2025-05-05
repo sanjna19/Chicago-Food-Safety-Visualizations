@@ -6,7 +6,7 @@ const linkedview1 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "hconcat": [
       {
-        "width": 500,
+        "width": 700,
         "height": 400,
         "data": {"url": "data/inspection_data_for_zip.csv"},
         "mark": "line",

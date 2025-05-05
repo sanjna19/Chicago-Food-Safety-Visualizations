@@ -70,8 +70,8 @@ h1 {
   /* CLOSE BUTTON */
   .modal-close {
     position: absolute;
-    top: 40px;
-    right: 16px;
+    top: 20px;
+    left: 8px;
     font-size: 24px;
     color: #333;
     cursor: pointer;
