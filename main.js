@@ -4,10 +4,10 @@
 
 const linkedview1 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "vconcat": [
+    "hconcat": [
       {
-        "width": 700,
-        "height": 200,
+        "width": 500,
+        "height": 400,
         "data": {"url": "data/inspection_data_for_zip.csv"},
         "mark": "line",
         "selection": {
@@ -24,7 +24,7 @@ const linkedview1 = {
         "title": "Failure Rate Over Time (Brush to Filter ZIP Codes)"
       },
       {
-        "width": 700,
+        "width": 600,
         "height": 400,
         "data": {"url": "data/inspection_data_for_zip.csv"},
         "transform": [
@@ -211,11 +211,11 @@ const linkedview3 = {
       }
     ],
   
-    "vconcat": [
+    "hconcat": [
       // --- Top Strip Plot (Clickable Risk Selection) ---
       {
         "width": 400,
-        "height": 120,
+        "height": 200,
         "data": {
           "values": [
             {"Risk": "Risk 1"},
@@ -312,10 +312,10 @@ const linkedview3 = {
       }
     ],
   
-    "vconcat": [
+    "hconcat": [
       // --- Top Bar Chart (Facility Type Counts for Selected Year) ---
       {
-        "width": 700,
+        "width": 500,
         "height": 400,
         "data": {"url": "data/inspection_data.csv"},
         "transform": [
@@ -346,7 +346,7 @@ const linkedview3 = {
   
       // --- Bottom Line Chart (Failure Rate Over Time for Selected Year) ---
       {
-        "width": 700,
+        "width": 500,
         "height": 400,
         "data": {"url": "data/inspection_data.csv"},
         "transform": [
@@ -568,7 +568,7 @@ const linkedview3 = {
 // Heatmap: Quarter vs Risk (Selection Origin)
 // -------------------------
 const heatmap = {
-  width: 700,
+  width: 400,
   height: 350,
   data: { url: "data/heatmap_data.csv" },
   mark: "rect",
@@ -625,7 +625,7 @@ const heatmap = {
 // Treemap
 // -------------------------
 const treemap = {
-  width: 700,
+  width: 550,
   height: 300,
   data: { url: "data/treemap_data_custom.csv" },
   mark: "rect",
@@ -690,7 +690,7 @@ const treemap = {
 // Violin Plot (Boxplot): Risk vs Violation Count
 // -------------------------
 const violin = {
-  width: 700,
+  width: 1000,
   height: 300,
   data: { url: "data/violin_data.csv" },
   transform: [
@@ -766,9 +766,10 @@ const violin = {
 // -------------------------
 const fullSpec = {
   vconcat: [
-    heatmap,
-    treemap,
-    violin
+    {
+      hconcat: [heatmap, treemap]
+    },
+     violin
   ],
   resolve: {
     scale: {
@@ -889,7 +890,7 @@ vegaEmbed("#view", fullSpec);
   };
   
   const parallel = {
-    width: 600,
+    width: 500,
     height: 300,
     data: { url: 'data/score_violation_parallel.csv' },
     transform: [
@@ -918,7 +919,7 @@ vegaEmbed("#view", fullSpec);
   
   vegaEmbed('#linked_bubble_parallel', {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-    vconcat: [bubble, parallel],
+    hconcat: [bubble, parallel],
     config: {
       view: { stroke: null },
       axis: { grid: true }
